@@ -1,4 +1,7 @@
 /* general syles */
+:root {
+  --border-size: 2px;
+}
 
 * {
   margin: 0;
@@ -21,6 +24,10 @@ p {
 }
 
 /* typography */
+
+.uppercase {
+  text-transform: uppercase;
+}
 
 .text-primary {
   color: var(--color-primary);
@@ -49,9 +56,7 @@ p {
 
 /* user interface */
 
-.uppercase {
-  text-transform: uppercase;
-}
+/* button styles */
 
 .btn {
   display: block;
@@ -64,14 +69,28 @@ p {
 
   background: var(--color-secondary);
   color: var(--color-light);
-  border: 2px solid var(--color-secondary);
+  border: var(--border-size) solid var(--color-secondary);
   border-radius: 4rem;
 }
 
 .btn-secondary {
   background: var(--color-light);
   color: var(--color-primary);
-  border-color: var(--color-primary);
-  /* border-image-slice: 1;
-  border-image-source: linear-gradient(-15deg, var(--color-secondary), var(--color-primary)); */
+  /* gradient border */
+  position: relative;
+  border-color: transparent;
+  background-clip: padding-box;
+}
+
+/* gradient-border */
+.btn-secondary::after {
+  position: absolute;
+  background: linear-gradient(-180deg, var(--color-primary), var(--color-secondary));
+  top: calc(-1 * var(--border-size));
+  right: calc(-1 * var(--border-size));
+  bottom: calc(-1 * var(--border-size));
+  left: calc(-1 * var(--border-size));
+  content: '';
+  z-index: -1;
+  border-radius: 4rem;
 }
