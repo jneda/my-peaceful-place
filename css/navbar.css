@@ -1,0 +1,26 @@
+/* navbar */
+
+nav {
+  z-index: 1;
+
+  padding: 1rem;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: rgba(255, 105, 180, 0.568);
+}
+
+nav ul {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav li {
+  font-size: 2em;
+}
+
+nav a {
+  text-decoration: none;
+}

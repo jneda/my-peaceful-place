@@ -1,0 +1,13 @@
+form>* {
+  margin: 1.5rem auto;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font: inherit;
+  color: var(--color-primary);
+  border: none;
+  border-bottom: 1px solid var(--color-primary);
+  padding: 1rem;
+}
